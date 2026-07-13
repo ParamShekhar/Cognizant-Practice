@@ -1,0 +1,17 @@
+Hands-On 1, Task 1, Step 2 - notes on generated project files:
+
+angular.json        - Workspace-level build configuration: defines projects, build targets, budgets, and asset/style paths.
+tsconfig.json        - Base TypeScript compiler configuration shared by the app and spec builds.
+tsconfig.app.json    - TypeScript config specifically for compiling the application (excludes spec files).
+package.json         - Lists npm dependencies/devDependencies and defines CLI scripts (start, build, test).
+src/main.ts           - Application entry point; bootstraps the root standalone AppComponent using appConfig.
+src/app/app.component.ts - Root component of the application; hosts the router outlet and top-level layout.
+src/index.html        - The single HTML page the SPA is rendered into; contains the <app-root> element.
+src/app/app.config.ts - Standalone application configuration (this project uses standalone components, not
+                        NgModules, which is Angular 17+/20's default approach) - registers router, HttpClient,
+                        interceptors, and the NgRx store.
+
+Step 5 - angular.json production budgets:
+  maximumWarning / maximumError under architect > build > configurations > production > budgets control the
+  bundle size thresholds. Angular CLI prints a build warning when a bundle crosses maximumWarning, and fails
+  the build entirely when it crosses maximumError - used to catch bundle bloat before it reaches production.

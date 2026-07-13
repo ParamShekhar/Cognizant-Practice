@@ -1,0 +1,5 @@
+.card { border: 1px solid #ccc; border-left: 4px solid grey; padding: 1rem; margin: 0.5rem 0; }
+.card--enrolled { background: #e6ffed; }
+.card--full { font-weight: bold; }
+.card.expanded { min-height: 150px; }
+.badge--green { color: green; } .badge--red { color: red; } .badge--grey { color: grey; }

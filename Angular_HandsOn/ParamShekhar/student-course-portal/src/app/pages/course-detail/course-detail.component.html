@@ -1,0 +1,5 @@
+<div *ngIf="course; else loading">
+  <h2>{{ course.name }}</h2>
+  <p>{{ course.code }} — {{ course.credits }} credits</p>
+</div>
+<ng-template #loading><p>Loading course...</p></ng-template>
